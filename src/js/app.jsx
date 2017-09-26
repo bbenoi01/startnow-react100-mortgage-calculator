@@ -53,24 +53,24 @@ export default class App extends React.Component {
         {/* your JSX goes here */}
         <div className='col-sm-offset-2 col-sm-10'>
           <div className="page-header">
-            <h3>Mortgage Calculator</h3>
+            <h3 style={{color: 'white'}} >Mortgage Calculator</h3>
           </div>
         </div> 
         <form className='form-horizontal' onSubmit={this.calculatePmt} >
           <div className='form-group'>
-            <label htmlFor='balance' className='col-sm-2 control-label'>Loan Balance</label>
+            <label htmlFor='balance' className='col-sm-2 control-label' style={{color: 'white'}} >Loan Balance</label>
             <div className='col-sm-10'>
-              <input type='number' name='balance' className='form-control' id='balance' onChange={this.updatebalanceInput} value={this.state.balanceInput} />
+              <input type='text' name='balance' className='form-control' id='balance' onChange={this.updatebalanceInput} value={this.state.balanceInput} />
             </div>
           </div>
           <div className='form-group'>
-            <label htmlFor='rate' className='col-sm-2 control-label'>Interest Rate (%)</label>
+            <label htmlFor='rate' className='col-sm-2 control-label' style={{color: 'white'}} >Interest Rate (%)</label>
             <div className='col-sm-10'>
-              <input type='number' name='rate' className='form-control' step='0.01' id='rate' onChange={this.updaterateInput} value={this.state.rateInput} />
+              <input type='text' name='rate' className='form-control' step='0.01' id='rate' onChange={this.updaterateInput} value={this.state.rateInput} />
             </div>
           </div>
           <div className='form-group'>
-            <label htmlFor='term' className='col-sm-2 control-label'>Loan Term (years)</label>
+            <label htmlFor='term' className='col-sm-2 control-label' style={{color: 'white'}} >Loan Term (years)</label>
             <div className='col-sm-10'>
               <select name='term' className='form-control' id='term' onChange={this.updatetermSelect} value={this.state.termSelect}>
                 <option value='15'>15</option>
@@ -83,7 +83,7 @@ export default class App extends React.Component {
               <button type='submit' name='submit' className='btn btn-primary'>Calculate</button>
             </div>
           </div>
-          <h3 id='output' name='output'>
+          <h3 id='output' name='output' style={{color: 'white'}} >
             <p>{this.state.pmtOutput}</p>
           </h3>
         </form>
